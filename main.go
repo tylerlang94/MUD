@@ -38,7 +38,7 @@ func handleConnection(conn net.Conn) error {
 	return nil
 }
 func StartServer() error {
-	log.Println("Starting Server")
+	log.Println("Starting Server...")
 
 	ln, err := net.Listen("tcp", ":8080")
 	if err != nil {
@@ -53,7 +53,7 @@ func StartServer() error {
 		}
 		go func() {
 			if err := handleConnection(conn); err != nil {
-				log.Println("Error handling exception", err)
+				log.Println("Error handling connection", err)
 				return
 			}
 		}()
