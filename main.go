@@ -7,7 +7,6 @@ import (
 )
 
 // Telnet Server
-
 func handleConnection(conn net.Conn) error {
 	log.Println("Connection Established")
 
